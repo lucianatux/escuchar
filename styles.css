@@ -1,0 +1,43 @@
+::-webkit-scrollbar {display: none;}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+body {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+#interactive-div{
+    display: flex;
+}
+#park-img{
+    height: 100vh;
+    margin: auto;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .options label {
+    margin: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+  }
+  
+  input[type="radio"] {
+    margin-right: 5px;
+  }
