@@ -15,17 +15,83 @@ body {
   text-align: center;
   font-size: 14px;
 }
+.fade {
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  .unfade {
+    opacity: 1;
+    transition: opacity 1s;
+  }
+  .hidden {
+    display: none;
+  }
 h4{
     width: 100%;
     padding: auto;
     margin: 15px 0;
 }
+#tutorial-div{
+    position: absolute;
+    padding: 10px;
+    top: 10%;
+    left: 10%;
+    width: 80vw;
+    height: 80vh;
+    font-size: 20px;
+    text-align: center;
+    z-index: 3;
+}
+#tutorial-div p{
+    background: radial-gradient(#fdd3ad, #9e5647);
+    border-radius: 10px;
+    padding: 70px 20px;
+}
+#talk-div{
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    z-index: 2;
+    width: 200px;
+    height: 200px;
+  }
+  #talk-div p{
+    background: url('./assets/hablar3.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    padding: 30% 10% 35% 10%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+  }
+  #answer-div{
+    position: absolute;
+    top: 40%;
+    right: 40%;
+    z-index: 2;
+    width: 250px;
+    height: 250px;
+  }
+  #answer-div p{
+    background: url('./assets/hablar4.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    padding: 25% 20% 40% 20%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+  }
 #interactive-div{
     display: flex;
     justify-content: center;
 }
 #park-img{
     height: 100vh;
+    z-index: -1;
 }
 
 .options {
@@ -48,6 +114,7 @@ h4{
   input[type="radio"] {
     margin-right: 5px;
   }
+  
  
   @media(max-width:568px){
  body{
@@ -58,5 +125,8 @@ h4{
  }
  .options label {
     margin: 0;
+ }
+ #tutorial-div{
+    font-size: 16px;
  }
   }
