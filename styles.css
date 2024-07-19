@@ -34,15 +34,13 @@ h4{
 button{
   width: 60%;
   height: 40px;
-  background: linear-gradient(#9bad4c, #448173, #7c8944);
+  background: linear-gradient(#021941, #448173, #269142);
   color: #fff;
-  letter-spacing: 1px;
-  font-weight: 600;
   border-radius: 10px;
   margin: 5% 20%;
 }
 button:hover{
-  background: linear-gradient(#4a938c, #627063, #4a938c);
+  background: linear-gradient( #269142, #448173, #021941);
 }
 #filtro-img{
   background-size: cover;
@@ -50,23 +48,13 @@ button:hover{
   position: absolute;
   top: 0%;
   right: 10%;
-  z-index: 999;
+  z-index: 2;
   width: 300px;
   height: 300px;
   opacity: 0.7;
   border-radius: 15px;
 }
-#filtro-img2{
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 50%;
-  right: 30%;
-  z-index: 999;
-  width: 250px;
-  height: 250px;
-  opacity: 0.7;
-}
+
 #tutorial-div{
     position: absolute;
     padding: 10px;
@@ -104,11 +92,11 @@ button:hover{
   }
   #answer-div{
     position: absolute;
-    top: 40%;
+    top: 50%;
     right: 40%;
     z-index: 2;
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
   }
   #answer-div p{
     background: url('./assets/hablar4.png');
@@ -119,7 +107,7 @@ button:hover{
     height: 100%;
     padding: 25% 20% 40% 20%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
   }
 #interactive-div{
     display: flex;
@@ -169,5 +157,24 @@ button:hover{
     }
     #tutorial-div{
        font-size: 16px;
+    }
+    #answer-div{
+      right: 30%;
+      width: 180px;
+      height: 180px;
+    }
+    #answer-div p{
+      width: 100%;
+      height: 100%;
+      padding: 40px 10% 40% 10%;
+      font-size: 14px;
+    }
+    button{
+      width: 70%;
+      height: 40px;
+      color: #fff;
+      font-weight: 600;
+      border-radius: 10px;
+      margin: 5% 20%;
     }
      }
