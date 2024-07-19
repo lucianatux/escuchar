@@ -34,7 +34,7 @@ h4{
 button{
   width: 60%;
   height: 40px;
-  background: radial-gradient(#7c8944, #203530, #7c8944);
+  background: linear-gradient(#9bad4c, #448173, #7c8944);
   color: #fff;
   letter-spacing: 1px;
   font-weight: 600;
@@ -42,7 +42,30 @@ button{
   margin: 5% 20%;
 }
 button:hover{
-  background: radial-gradient(#4a938c, #627063, #4a938c);
+  background: linear-gradient(#4a938c, #627063, #4a938c);
+}
+#filtro-img{
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0%;
+  right: 10%;
+  z-index: 999;
+  width: 300px;
+  height: 300px;
+  opacity: 0.7;
+  border-radius: 15px;
+}
+#filtro-img2{
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  right: 30%;
+  z-index: 999;
+  width: 250px;
+  height: 250px;
+  opacity: 0.7;
 }
 #tutorial-div{
     position: absolute;

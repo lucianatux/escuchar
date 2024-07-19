@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const tutorialDiv = document.getElementById("tutorial-div");
     const talkDiv = document.getElementById("talk-div");
     const answerDiv = document.getElementById("answer-div");
+    const filtroImg = document.getElementById("filtro-img");
+    const filtroImg2 = document.getElementById("filtro-img2");
   
     const tutorial = [
       "<p>Esta experiencia interactiva te mostrará cómo nuestro mundo interno: nuestros gustos, sensaciones, recuerdos, prejuicios e ideas cambian nuestra interpretación del mundo y las respuestas que damos</p>",
@@ -20,12 +22,10 @@ document.addEventListener("DOMContentLoaded", function () {
       "<p>Hey! Me alegra verte</p>",
       "<p>¿Qué quieres?</p>",
       "<p>Lo siento, dime rápido, me tengo que ir...</p>",
-      "<p>... aquí estoy</p>",
       "<p> qué irritante...!</p>",
       "<p>...quiero estar solo/a</p>",
       "<p>Me cuesta creerte, te llamé y me rechazaste las llamadas</p>",
-      "<p>Para lo que necesites, amiga, aquí estoy...</p>",
-
+      "<p>Para lo que necesites, amiga, aquí estoy...</p>"
     ];
   
     let cancelPresentation = false;
@@ -106,46 +106,65 @@ restartButton.addEventListener('click', function() {
       hideElement(tutorialDiv);
       hideElement(talkDiv);
       hideElement(answerDiv);
+      parkImg.style.filter = "saturate(100%)";
+      filtroImg.style.top = "0%";
+      filtroImg.style.right = "10%";
+      filtroImg.style.opacity = "0.7";
+      filtroImg.style.width = "300px";
+      filtroImg.style.height = "300px";
+
   
       switch (effect) {
         case "agrada":
-          parkImg.style.filter = "saturate(110%)";
+          parkImg.style.filter = "saturate(115%) brightness(115%)";
           updateDivContent(answerDiv, answer[0]);
+          filtroImg.style.backgroundImage = "url('./assets/esc6.jpg')";
+          showElement(filtroImg);
           break;
         case "desagrada":
-          parkImg.style.filter = "saturate(70%)";
+          parkImg.style.filter = "brightness(80%)";
           updateDivContent(answerDiv, answer[1]);
+          filtroImg.style.backgroundImage = "url('./assets/glitch1.gif')";
+          filtroImg.style.top = "40%";
+          filtroImg.style.right = "5%";
+          filtroImg.style.opacity = "0.3";
+          filtroImg.style.width = "20%";
+          filtroImg.style.height = "400px";
+    
+          showElement(filtroImg);
           break;
         case "apurado":
           parkImg.style.filter = "hue-rotate(300deg)";
           updateDivContent(answerDiv, answer[2]);
+          filtroImg.style.backgroundImage = "url('./assets/clock2.png')";
+          showElement(filtroImg);
           break;
-        case "relajado":
-          parkImg.style.filter = "saturate(110%)";
+        case "panza":
+          parkImg.style.filter = "hue-rotate(90deg)";
           updateDivContent(answerDiv, answer[3]);
-          break;
-        case "tenso":
-          parkImg.style.filter = "hue-rotate(180deg)";
-          updateDivContent(answerDiv, answer[4]);
+          filtroImg.style.backgroundImage = "url('./assets/inodoro.jpg')";
+          showElement(filtroImg);
           break;
         case "triste":
-          parkImg.style.filter = "saturate(10%)";
-          updateDivContent(answerDiv, answer[5]);
+          parkImg.style.filter = "grayscale(90%)";
+          updateDivContent(answerDiv, answer[4]);
+          filtroImg.style.backgroundImage = "url('./assets/lluviagif.gif')";
+          filtroImg.style.top = "50%";
+          showElement(filtroImg);
           break;
         case "llamando":
-          parkImg.style.filter = "url('./assets/esc1.jpg')";
-          updateDivContent(answerDiv, answer[6]);
+          parkImg.style.filter = "hue-rotate(180deg)";
+          updateDivContent(answerDiv, answer[5]);
+          filtroImg.style.backgroundImage = "url('./assets/phone.jpg')";
+          showElement(filtroImg);
           break;
         case "regalo":
           parkImg.style.filter = "saturate(100%)";
-          updateDivContent(answerDiv, answer[7]);
-          break;
-        case "discutiendo":
-          parkImg.style.filter = "url('./assets/esc5.jpg')";
-          // Lógica para "discutiendo"
+          updateDivContent(answerDiv, answer[6]);
+          filtroImg.style.backgroundImage = "url('./assets/gift.jpg')";
+          showElement(filtroImg);
           break;
         default:
-          parkImg.style.filter = "saturate(100%)";
           break;
       }
     }
