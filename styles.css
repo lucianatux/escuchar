@@ -31,6 +31,19 @@ h4{
     padding: auto;
     margin: 15px 0;
 }
+button{
+  width: 60%;
+  height: 40px;
+  background: radial-gradient(#7c8944, #203530, #7c8944);
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: 600;
+  border-radius: 10px;
+  margin: 5% 20%;
+}
+button:hover{
+  background: radial-gradient(#4a938c, #627063, #4a938c);
+}
 #tutorial-div{
     position: absolute;
     padding: 10px;
@@ -120,13 +133,18 @@ h4{
  body{
     font-size: 12px;
  }
- .options{
-    margin: 0 3px 0 6px;
- }
- .options label {
-    margin: 0;
- }
- #tutorial-div{
-    font-size: 16px;
- }
   }
+  @media(max-width:768px){
+    body{
+       font-size: 14px;
+    }
+    .options{
+       margin: 0 3px 0 6px;
+    }
+    .options label {
+       margin: 0;
+    }
+    #tutorial-div{
+       font-size: 16px;
+    }
+     }
