@@ -99,6 +99,7 @@ button:hover{
     max-width: 200px !important;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 16px;
+    color: #111;
   }
 #interactive-div{
     display: flex;
