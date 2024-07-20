@@ -17,13 +17,13 @@ document.addEventListener("DOMContentLoaded", function () {
     "<p>Te estaba buscando...!</p>",
   ];
   const answer = [
-    "<p><br/>Hey! Me alegra verte</p>",
-    "<p><br/>¿Qué quieres?</p>",
-    "<p><br/>Lo siento, dime rápido, me tengo que ir...</p>",
-    "<p><br/> ...disculpa, me siento mal</p>",
-    "<p><br/>Hoy no estoy para nadie ...quiero estar solo/a</p>",
+    "<p>Hey! Me alegra verte</p>",
+    "<p>¿Qué quieres?</p>",
+    "<p>Lo siento, dime rápido, me tengo que ir...</p>",
+    "<p>...disculpa, me siento mal</p>",
+    "<p>Hoy no estoy para nadie ...quiero estar solo/a</p>",
     "<p>Me cuesta creerte, te llamé y me rechazaste las llamadas</p>",
-    "<p><br/>Para lo que necesites, amiga, aquí estoy...</p>",
+    "<p>Para lo que necesites, amiga, aquí estoy...</p>",
   ];
 
   let cancelPresentation = false;
@@ -111,10 +111,10 @@ document.addEventListener("DOMContentLoaded", function () {
     hideElement(talkDiv);
     hideElement(answerDiv);
     parkImg.style.filter = "saturate(100%)";
-    filtroImg.style.width = isSmallScreen ? "180px" : "300px"; 
-    filtroImg.style.height = isSmallScreen ? "180px" : "300px"; 
+    filtroImg.style.width = isSmallScreen ? "180px" : "250px"; 
+    filtroImg.style.height = isSmallScreen ? "180px" : "250px"; 
     filtroImg.style.top = isSmallScreen ? "10%" : "3%"; 
-    filtroImg.style.right = isSmallScreen ? "5%" : "10%"; 
+    filtroImg.style.right = isSmallScreen ? "3%" : "10%"; 
     filtroImg.style.opacity = "0.7";
 
     switch (effect) {
@@ -128,10 +128,10 @@ document.addEventListener("DOMContentLoaded", function () {
         parkImg.style.filter = "brightness(80%)";
         updateDivContent(answerDiv, answer[1]);
         filtroImg.style.backgroundImage = "url('./assets/glitch1.gif')";
-        filtroImg.style.width = isSmallScreen ? "27%" : "20%"; 
+        filtroImg.style.width = isSmallScreen ? "45%" : "25%"; 
     filtroImg.style.height = isSmallScreen ? "400px" : "400px"; 
     filtroImg.style.top = isSmallScreen ? "40%" : "40%"; 
-    filtroImg.style.right = isSmallScreen ? "8%" : "5%"; 
+    filtroImg.style.right = isSmallScreen ? "30px" : "35px"; 
     filtroImg.style.opacity = "0.3";
 
 
@@ -153,9 +153,10 @@ document.addEventListener("DOMContentLoaded", function () {
         parkImg.style.filter = "grayscale(90%)";
         updateDivContent(answerDiv, answer[4]);
         filtroImg.style.backgroundImage = "url('./assets/lluviagif.gif')";
-        filtroImg.style.top = isSmallScreen ? "45%" : "50%"; 
+        filtroImg.style.top = isSmallScreen ? "45%" : "30%"; 
         filtroImg.style.width = isSmallScreen ? "250px" : "300px"; 
-        filtroImg.style.height = isSmallScreen ? "400px" : "300px"; 
+        filtroImg.style.height = isSmallScreen ? "400px" : "600px"; 
+        filtroImg.style.opacity = "0.9";
         showElement(filtroImg);
         break;
       case "llamando":
@@ -175,12 +176,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function cambiarImagenSegunPantalla() {
-    const windowWidth = window.innerWidth;
-    parkImg.src =
-      windowWidth <= 568 ? "./assets/esc4.jpg" : "./assets/esc3.jpg";
-  }
-
-  window.addEventListener("resize", cambiarImagenSegunPantalla);
-  cambiarImagenSegunPantalla();
 });
